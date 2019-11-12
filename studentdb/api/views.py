@@ -99,9 +99,9 @@ class StudentUpdateAPIView(views.APIView):
 
 
 class ClearStudentRecordsAPIView(views.APIView):
-    def post(self,request):
-        memory =  StudentDB.objects.all()
-        memory.delete()
+    def post(self,request, id):
+        def delete(self,request,id):
+        memory = StudentDB.objects.get(id=id)
 
         return response.Response( # Renders to content type as requested by the client.
             status=status.HTTP_200_OK,
