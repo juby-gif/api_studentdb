@@ -61,7 +61,7 @@ class StudentDetailAPIView(views.APIView):
                 'message': 'No details found',
                      })
 class StudentUpdateAPIView(views.APIView):
-    def post(self, request, id):
+    def put(self, request, id):
         first_name = request.data.get('fname', None)
         last_name = request.data.get('lname', None)
         mark = request.data.get('mark', None)
